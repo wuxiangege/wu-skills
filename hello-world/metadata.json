@@ -1,0 +1,19 @@
+{
+    "name": "hello-world",
+    "version": "1.0.0",
+    "author": "wuxiangege",
+    "description": "生成 Python、C、Java、C++、JavaScript、Go 的最小 Hello World 示例（语言顺序参考 TIOBE 2026-01）",
+    "tags": [
+      "beginner",
+      "demo",
+      "hello-world"
+    ],
+    "languages": [
+      "python",
+      "c",
+      "java",
+      "cpp",
+      "javascript",
+      "go"
+    ]
+  }
