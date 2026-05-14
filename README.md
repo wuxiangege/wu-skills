@@ -57,10 +57,6 @@ git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 @task-desc-generator feature/TS-48761
 ```
 
-### 手动把说明贴给 AI
-
-不依赖 `@` 时，可打开某个技能下的 `SKILL.md`，把正文（或全文）复制到对话里，再写你的任务说明。
-
 ## 维护说明
 
 - 个人技能根路径：`~/.cursor/skills/`（勿与 Cursor 内置的 `~/.cursor/skills-cursor/` 混用）。
