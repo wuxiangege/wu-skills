@@ -13,7 +13,7 @@
 
 Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。本仓库已放在个人技能路径下时，无需额外配置。
 
-### 方式一：整库克隆到技能目录（推荐）
+### 把整个库克隆到技能目录
 
 把本仓库克隆到 `~/.cursor/skills/` 下任意文件夹名（例如 `wu-skills`），保证目录结构类似：
 
@@ -31,15 +31,6 @@ Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。本仓库�
 ```bash
 mkdir -p ~/.cursor/skills
 git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
-```
-
-### 方式二：只拷贝单个技能
-
-只需要某一个技能时，复制对应子目录即可，例如：
-
-```bash
-mkdir -p ~/.cursor/skills/hello-world
-cp -R /path/to/wu-skills/hello-world/* ~/.cursor/skills/hello-world/
 ```
 
 安装后重启 Cursor 或新开对话，便于技能列表刷新。
