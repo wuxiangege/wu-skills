@@ -1,7 +1,7 @@
 # 🚀 wu-skills
 
 个人 AI 技能库 | Personal Cursor Agent Skills  
-包含：`hello-world`、`task-desc-generator`
+包含：`hello-world`、`task-desc-generator`、`docker-compose`
 
 ---
 
@@ -11,6 +11,7 @@
 | --- | --- |
 | 🧪 hello-world | 生成最简单 hello world 示例。 |
 | 📝 task-desc-generator | 根据 Git 分支改动生成可直接填入任务系统的中文任务描述。 |
+| 🐳 [docker-compose](./docker-compose/README.md) | 按配方（如 `mysql5`）生成可直接使用的 `docker-compose.yml`。 |
 
 ---
 
@@ -28,8 +29,14 @@ Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。
 ├── README.md
 ├── hello-world/
 │   └── SKILL.md
-└── task-desc-generator/
-    └── SKILL.md
+├── task-desc-generator/
+│   └── SKILL.md
+└── docker-compose/
+    ├── SKILL.md
+    ├── README.md
+    ├── metadata.json
+    └── templates/
+        └── mysql5.yml
 ```
 
 示例命令（若目录已存在请先备份或换名）：
@@ -68,6 +75,14 @@ git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 
 ```text
 @task-desc-generator feature/TS-48761
+```
+
+---
+
+### 🐳 示例：docker-compose
+
+```text
+@docker-compose mysql5
 ```
 
 ---

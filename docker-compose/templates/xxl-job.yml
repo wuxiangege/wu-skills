@@ -1,0 +1,38 @@
+services:
+  xxl-mysql:
+    image: mysql:8.0
+    container_name: xxl-job-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: xxl_job
+    volumes:
+      - xxl_job_mysql_data:/var/lib/mysql
+      - ./xxl-job-tables.sql:/docker-entrypoint-initdb.d/00-xxl-job.sql:ro
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 60s
+
+  xxl-job-admin:
+    image: xuxueli/xxl-job-admin:2.4.1
+    container_name: xxl-job-admin
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      PARAMS: >-
+        --spring.datasource.url=jdbc:mysql://xxl-mysql:3306/xxl_job?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+        --spring.datasource.username=root
+        --spring.datasource.password=root
+    depends_on:
+      xxl-mysql:
+        condition: service_healthy
+
+volumes:
+  xxl_job_mysql_data:

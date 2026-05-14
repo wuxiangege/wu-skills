@@ -1,0 +1,16 @@
+{
+  "name": "docker-compose",
+  "version": "1.1.0",
+  "author": "wuxiangege",
+  "description": "按配方（mysql5/mysql8/postgresql/rabbitmq/rocketmq/xxl-job）生成标准可用的 docker-compose.yml",
+  "tags": [
+    "docker",
+    "docker-compose",
+    "mysql",
+    "postgresql",
+    "rabbitmq",
+    "rocketmq",
+    "xxl-job",
+    "devops"
+  ]
+}

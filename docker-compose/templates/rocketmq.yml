@@ -1,0 +1,49 @@
+services:
+  rmqnamesrv:
+    image: apache/rocketmq:5.2.0
+    container_name: rmqnamesrv
+    restart: unless-stopped
+    ports:
+      - "9876:9876"
+    volumes:
+      - rmq_namesrv_logs:/home/rocketmq/logs
+    command: sh mqnamesrv
+
+  rmqbroker:
+    image: apache/rocketmq:5.2.0
+    container_name: rmqbroker
+    restart: unless-stopped
+    ports:
+      - "10909:10909"
+      - "10911:10911"
+      - "10912:10912"
+    volumes:
+      - rmq_broker_logs:/home/rocketmq/logs
+      - rmq_broker_store:/home/rocketmq/store
+    depends_on:
+      rmqnamesrv:
+        condition: service_started
+    command: sh mqbroker -n rmqnamesrv:9876 -c /run/rocketmq/broker.conf
+    configs:
+      - source: rmq_broker_conf
+        target: /run/rocketmq/broker.conf
+
+configs:
+  rmq_broker_conf:
+    content: |
+      brokerClusterName=DefaultCluster
+      brokerName=broker-a
+      brokerId=0
+      deleteWhen=04
+      fileReservedTime=48
+      brokerRole=ASYNC_MASTER
+      flushDiskType=ASYNC_FLUSH
+      brokerIP1=127.0.0.1
+      namesrvAddr=rmqnamesrv:9876
+      listenPort=10911
+      autoCreateTopicEnable=true
+
+volumes:
+  rmq_namesrv_logs:
+  rmq_broker_logs:
+  rmq_broker_store:
