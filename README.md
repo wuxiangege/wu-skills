@@ -30,7 +30,7 @@ Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。本仓库�
 
 ```bash
 mkdir -p ~/.cursor/skills
-git clone <你的仓库 URL> ~/.cursor/skills/wu-skills
+git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 ```
 
 ### 方式二：只拷贝单个技能
