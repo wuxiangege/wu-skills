@@ -1,9 +1,9 @@
 ---
-name: branch-task-desc
+name: task-desc-generator
 description: 根据当前分支、指定分支或任务号分析 Git 改动，生成可直接填入任务系统并可渲染的 Markdown 中文任务描述。适用于用户提到分支任务描述、TS-任务号、feature/TS-xxxxx、自动填写任务描述、根据分支改动生成任务说明时；只输出 Markdown 文案，不修改代码或文档。
 ---
 
-# Branch Task Desc
+# Task Desc Generator
 
 ## Role
 
@@ -13,8 +13,8 @@ description: 根据当前分支、指定分支或任务号分析 Git 改动，�
 
 当用户输入类似以下内容时使用本 Skill：
 
-- `@branch-task-desc`
-- `@branch-task-desc feature/TS-48761`
+- `@task-desc-generator`
+- `@task-desc-generator feature/TS-48761`
 - `根据 feature/TS-48761 生成任务描述`
 - `TS-48761 任务描述`
 - `帮我按分支改动填任务描述`
@@ -88,7 +88,7 @@ description: 根据当前分支、指定分支或任务号分析 Git 改动，�
 输入：
 
 ```text
-@branch-task-desc feature/TS-48761
+@task-desc-generator feature/TS-48761
 ```
 
 输出：
