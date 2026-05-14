@@ -3,9 +3,10 @@
 
 ## Skills
 
-### hello-world
-
-生成最简单 hello world 示例。
+| 技能名 | 描述 |
+| --- | --- |
+| hello-world | 生成最简单 hello world 示例。 |
+| branch-task-desc | 根据 Git 分支改动生成可直接填入任务系统的中文任务描述。 |
 
 ## Usage
 
