@@ -1,7 +1,7 @@
 # 🚀 wu-skills
 
 个人 AI 技能库 | Personal Cursor Agent Skills  
-包含：`hello-world`、`task-desc-generator`
+包含：`hello-world`、`task-desc-generator`、`pua-response`
 
 ---
 
@@ -11,6 +11,7 @@
 | --- | --- |
 | 🧪 hello-world | 生成最简单 hello world 示例。 |
 | 📝 task-desc-generator | 根据 Git 分支改动生成可直接填入任务系统的中文任务描述。 |
+| 🛡️ pua-response | 拆解情感操控、职场打压等经历，并给出被动反制与生存方案。 |
 
 ---
 
@@ -28,7 +29,9 @@ Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。
 ├── README.md
 ├── hello-world/
 │   └── SKILL.md
-└── task-desc-generator/
+├── task-desc-generator/
+│   └── SKILL.md
+└── pua-response/
     └── SKILL.md
 ```
 
@@ -68,6 +71,18 @@ git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 
 ```text
 @task-desc-generator feature/TS-48761
+```
+
+---
+
+### 🛡️ 示例：pua-response
+
+```text
+@pua-response 我最近的经历是……
+```
+
+```text
+@pua-response 帮我拆解这段经历，并给我被动反制和生存方案
 ```
 
 ---
