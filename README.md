@@ -1,7 +1,7 @@
 # 🚀 wu-skills
 
 个人 AI 技能库 | Personal Cursor Agent Skills  
-包含：`hello-world`、`task-desc-generator`、`pua-response`
+包含：`hello-world`、`task-desc-generator`、`pua-response`、`business-flow-mapper`
 
 ---
 
@@ -12,6 +12,7 @@
 | 🧪 hello-world | 生成最简单 hello world 示例。 |
 | 📝 task-desc-generator | 根据 Git 分支改动生成可直接填入任务系统的中文任务描述。 |
 | 🛡️ pua-response | 拆解情感操控、职场打压等经历，并给出被动反制与生存方案。 |
+| 🗺️ business-flow-mapper | 梳理零散业务信息，输出流程图、时序图、状态图等 Mermaid 图表，快速理清链路。 |
 
 ---
 
@@ -31,7 +32,9 @@ Cursor 会从本机技能目录加载子文件夹里的 `SKILL.md`。
 │   └── SKILL.md
 ├── task-desc-generator/
 │   └── SKILL.md
-└── pua-response/
+├── pua-response/
+│   └── SKILL.md
+└── business-flow-mapper/
     └── SKILL.md
 ```
 
@@ -83,6 +86,22 @@ git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 
 ```text
 @pua-response 帮我拆解这段经历，并给我被动反制和生存方案
+```
+
+---
+
+### 🗺️ 示例：business-flow-mapper
+
+```text
+@business-flow-mapper 用户下单后调用支付，支付成功才扣库存，失败就取消订单。还有支付回调。
+```
+
+```text
+@business-flow-mapper 根据这段 PRD 帮我画流程图和时序图：[粘贴需求片段]
+```
+
+```text
+@business-flow-mapper 结合 order/handler 和 payment 相关代码，梳理下单支付链路
 ```
 
 ---

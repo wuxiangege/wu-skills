@@ -1,0 +1,13 @@
+{
+  "name": "business-flow-mapper",
+  "version": "1.0.0",
+  "author": "wuxiangege",
+  "description": "梳理零散业务信息，输出流程图、时序图、状态图等 Mermaid 图表，帮助非业务背景者快速理解链路",
+  "tags": [
+    "business",
+    "flowchart",
+    "sequence-diagram",
+    "mermaid",
+    "analysis"
+  ]
+}
