@@ -1,7 +1,7 @@
 # 🚀 wu-skills
 
 个人 AI 技能库 | Personal Cursor Agent Skills  
-包含：`hello-world`、`task-desc-generator`、`pua-response`、`business-flow-mapper`
+包含：`hello-world`、`task-desc-generator`、`pua-response`、`business-flow-mapper`、`domain-term-explainer`、`tech-stack-analyzer`
 
 ---
 
@@ -13,6 +13,8 @@
 | 📝 task-desc-generator | 根据 Git 分支改动生成可直接填入任务系统的中文任务描述。 |
 | 🛡️ pua-response | 拆解情感操控、职场打压等经历，并给出被动反制与生存方案。 |
 | 🗺️ business-flow-mapper | 梳理零散业务信息，输出流程图、时序图、状态图等 Mermaid 图表，快速理清链路。 |
+| 📖 domain-term-explainer | 用五维框架解释领域术语，附代码锚点与业务举例。 |
+| 🔍 tech-stack-analyzer | 扫描代码与依赖，识别技术栈（框架、DB、ORM、DDD、设计模式等）并举例说明。 |
 
 ---
 
@@ -102,6 +104,22 @@ git clone https://github.com/wuxiangege/wu-skills.git ~/.cursor/skills/wu-skills
 
 ```text
 @business-flow-mapper 结合 order/handler 和 payment 相关代码，梳理下单支付链路
+```
+
+---
+
+### 🔍 示例：tech-stack-analyzer
+
+```text
+@tech-stack-analyzer 分析 finance-center-api 用了哪些技术栈
+```
+
+```text
+@tech-stack-analyzer 对比 finance-center-api 和 finance-center-jobs 的技术差异，要举例
+```
+
+```text
+@tech-stack-analyzer 盘点当前工作区所有 Go 项目的技术栈，给新人 onboarding 用
 ```
 
 ---

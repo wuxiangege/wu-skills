@@ -1,0 +1,15 @@
+{
+  "name": "tech-stack-analyzer",
+  "version": "1.0.0",
+  "author": "wuxiangege",
+  "description": "扫描代码与依赖，识别技术栈（框架、数据库、ORM、通信、架构、设计模式、常用库），每项附检测依据与项目内举例",
+  "tags": [
+    "tech-stack",
+    "architecture",
+    "go-zero",
+    "gorm",
+    "ddd",
+    "onboarding",
+    "analysis"
+  ]
+}
